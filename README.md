@@ -4,7 +4,7 @@ Terraform and ansible libraries and documentation
 ## This is a Terra-ble library
 
 ### Minimal instructions
-Use the `ansible/main.yml` as starting point, add or remove `import_playbook` directives at the top, you can delete the rest if you don't want to use any roles, otherwise you should probably change your target host/s, username etc and add or remove a role.  
+Use `ansible/main.yml` as starting point, add or remove `import_playbook` directives at the top, you can delete the rest if you don't want to use any roles, otherwise you should probably change your target host/s, username etc and add or remove a role.  
 If you don't know how to setup your `clouds.yml` and `hosts` file you should consult google and start learning.  
 There is probably something useful in the readme files in each directory.
 

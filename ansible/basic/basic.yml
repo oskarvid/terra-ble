@@ -11,7 +11,8 @@
       name:
         byobu,
         python3-pip,
-        git
+        git,
+        nmon
 
   - name: configure byobu launch-by-default
     shell: printf "\n_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true" >> /home/ubuntu/.profile
@@ -19,4 +20,4 @@
   - name: Copy bashrc file to new VM
     copy:
       src: ~/.bashrc
-      dest: /home/ubuntu
+      dest: /home/ubuntu/

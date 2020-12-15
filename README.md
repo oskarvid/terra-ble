@@ -8,6 +8,8 @@ Use `ansible/main.yml` as starting point, add or remove `import_playbook` direct
 If you don't know how to setup your `clouds.yml` and `hosts` file you should consult google and start learning.  
 There is probably something useful in the readme files in each directory.
 
+To run it locally, run `ansible-playbook -K --connection=local main.yml`  
+
 ### Scope 
 This library is a collection of terraform and ansible scripts that are useful enough for version control but not part of a bigger project. Some scripts can be universal and useful for anyone, other scripts may be very specialized and less useful for you.
 

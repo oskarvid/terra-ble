@@ -1,0 +1,10 @@
+# Terraform instructions
+
+## Basics
+`source keystone_rc`  
+`terraform init`  
+`terraform plan`  
+`terraform apply`  
+
+If the key already exists remotely (in OpenStack), run the following:  
+`terraform import openstack_compute_keypair_v2.resource_name_here key_name_here`

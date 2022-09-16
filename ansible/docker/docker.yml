@@ -1,7 +1,7 @@
 - name: Set up docker on Ubuntu
   hosts: 
-    test1
-  user: ubuntu
+    localhost
+  user: oskar
   become: true
   tasks:
   - name: Install dependencies
@@ -36,4 +36,4 @@
 
   - name: Make docker runnable without root
     become_user: root
-    shell: usermod -aG docker ubuntu
+    shell: usermod -aG docker oskar

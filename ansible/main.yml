@@ -1,21 +1,11 @@
-- import_playbook: basic/basic.yml
-- import_playbook: docker/docker.yml
-- import_playbook: disks/disks.yml
-- import_playbook: install-ansible/install-ansible.yml
-- name: Set up compute
-  hosts: 
-    test1
-  user: ubuntu
-  become: yes
-  pre_tasks:
-    - name: create a folder for go
-      file:
-        path: "{{ golang_install_dir }}"
-        recurse: yes
-    - name: apt update
-      apt:
-        cache_valid_time: 3600
-        update_cache: yes
-      when: ansible_os_family == "Debian"
-  roles:
-    - lecorguille.singularity # This is for version 3+
+- name: run stress
+  hosts:
+    all
+  user: '{{ username }}'
+  vars_files:
+    - vars/username.yml
+    - defaults/main.yml
+  become: true
+  tasks:
+    - name: main task
+      include: tasks/main.yml
